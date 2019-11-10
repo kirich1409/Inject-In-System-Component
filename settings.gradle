@@ -1,0 +1,2 @@
+rootProject.name = 'Inject In System Component'
+include ':app'

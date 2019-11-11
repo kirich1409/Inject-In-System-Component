@@ -13,7 +13,7 @@ class SampleApplication : Application() {
         super.onCreate()
         appComponent = DaggerAppComponent.create()
         registerActivityLifecycleCallbacks(
-            SetFragmentFactoryActivityLifecycleCallback(appComponent.fragmentFactory)
+            SetFragmentFactoryActivityCallback(appComponent.fragmentFactory)
         )
     }
 }

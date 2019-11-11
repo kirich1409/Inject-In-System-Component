@@ -9,8 +9,8 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 
 @Module
-interface BindsModule {
+interface FragmentBindsModule {
 
     @[Binds IntoMap FragmentKey(MessageFragment::class)]
-    fun bindMessageFragmentToFragment(fragment: MessageFragment): Fragment
+    fun bindMessageFragmentToFragmentForMultiBinding(fragment: MessageFragment): Fragment
 }

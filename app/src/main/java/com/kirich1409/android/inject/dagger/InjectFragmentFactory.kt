@@ -19,7 +19,7 @@ class InjectFragmentFactory(
         // If provider was not found use super function to create fragment
         // (using Reflection and default constructor)
         if (provider == null) {
-            Log.w(TAG, "Can't find Provider for `$className`. Fragment will be created using Reflection.")
+            Log.w(TAG, "Can't find Provider for `$className`. Fragment will be created using Reflection API.")
             return super.instantiate(classLoader, className)
         }
         // Create new Fragment instance

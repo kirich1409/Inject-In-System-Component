@@ -1,15 +1,15 @@
-package com.kirich1409.android.inject.dagger
+package com.kirich1409.android.inject.dagger.keys
 
-import androidx.fragment.app.Fragment
+import android.app.Service
 import dagger.MapKey
 import kotlin.reflect.KClass
 
 /**
- * A *MapKey* annotation for maps with [Class<out Fragment>][Class] keys.
+ * A *MapKey* annotation for maps with [Class<out Service>][Class] keys.
  *
  * [Dagger Multibindings](https://dagger.dev/multibindings.html)
  */
 @MapKey
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY_GETTER)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class FragmentKey(val value: KClass<out Fragment>)
+annotation class ServiceKey(@Suppress("unused") val value: KClass<out Service>)

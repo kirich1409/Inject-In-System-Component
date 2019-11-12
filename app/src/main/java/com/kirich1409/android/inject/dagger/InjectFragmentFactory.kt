@@ -27,13 +27,14 @@ class InjectFragmentFactory(
         return provider.get()
     }
 
-    private companion object {
+    companion object {
 
         private const val TAG = "InjectFragmentFactory"
-    }
-}
 
-@Suppress("FunctionName")
-fun InjectFragmentFactory(providers: Map<Class<out Fragment>, Provider<Fragment>>): InjectFragmentFactory {
-    return InjectFragmentFactory(providers.mapKeys { (fragmentClass, _) -> fragmentClass.name })
+        @JvmName("newInstance")
+        @JvmStatic
+        operator fun invoke(providers: Map<Class<out Fragment>, Provider<Fragment>>) : InjectFragmentFactory {
+            return InjectFragmentFactory(providers.mapKeys { (fragmentClass, _) -> fragmentClass.name })
+        }
+    }
 }

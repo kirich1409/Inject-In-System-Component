@@ -57,7 +57,7 @@ class InjectComponentFactory : AppComponentFactory() {
         return createComponent(providerProviders, className) { super.instantiateProvider(cl, className) }
     }
 
-    private inline fun <T : Any> createComponent(
+    private fun <T : Any> createComponent(
         providers: Map<String, Provider<T>>,
         className: String,
         default: () -> T

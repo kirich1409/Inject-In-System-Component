@@ -8,7 +8,7 @@
     <application
         android:name=".SampleApplication"
         android:allowBackup="true"
-        android:appComponentFactory="com.kirich1409.android.inject.InjectComponentFactory"
+        android:appComponentFactory="com.kirich1409.android.inject.dagger.InjectComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
